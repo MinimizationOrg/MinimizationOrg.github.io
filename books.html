@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Minimization</title>
+<title>Minimization - Books</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./partial_huge.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,7 +61,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -82,11 +115,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./books.html" rel="" target="">
+    <a class="nav-link active" href="./books.html" rel="" target="" aria-current="page">
  <span class="menu-text">Books</span></a>
   </li>  
   <li class="nav-item">
@@ -112,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Minimization</h1>
+<h1 class="title">Books</h1>
 </div>
 
 
@@ -127,11 +160,67 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This is a website about mathematical optimization. It is under construction.</p>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1681756988198" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./books/loco.html"> <img src="./images/loco.jpg" class="thumbnail-image" style="height: 100%;"> </a></p>
+</div>
+<div class="body">
+<a href="./books/loco.html">
+<h3 class="no-anchor listing-title">
+Lectures on Convex Optimization
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Second edition</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./books/loco.html">
+<div class="listing-author">
+Yurii Nesterov
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-file-modified-sort="1681757022075" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./books/nonlinear.html"> <img src="./images/nonlinear.jpg" class="thumbnail-image" style="height: 100%;"> </a></p>
+</div>
+<div class="body">
+<a href="./books/nonlinear.html">
+<h3 class="no-anchor listing-title">
+Nonlinear Programming
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>Third edition</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./books/nonlinear.html">
+<div class="listing-author">
+Dimitri P. Bertsekas
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
