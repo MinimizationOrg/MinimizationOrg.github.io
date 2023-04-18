@@ -2,8 +2,9 @@
   {
     "listing": "/books/index.html",
     "items": [
-      "/books/loco.html",
-      "/books/nonlinear.html"
+      "/books/LoCO.html",
+      "/books/nonlinear.html",
+      "/books/FOMO.html"
     ]
   }
 ]

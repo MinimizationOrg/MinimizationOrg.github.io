@@ -1,24 +1,52 @@
 [
   {
-    "objectID": "books/loco.html",
-    "href": "books/loco.html",
+    "objectID": "books/LoCO.html",
+    "href": "books/LoCO.html",
     "title": "Lectures on Convex Optimization",
     "section": "",
-    "text": "This page is under construction."
+    "text": "Presents a self-contained description of fast gradient methods\nOffers the first description in the monographic literature of the modern second-order methods based on cubic regularization\nProvides a comprehensive treatment of the smoothing technique\nDevelops a new theory of optimization in relative scale"
+  },
+  {
+    "objectID": "books/LoCO.html#errata-and-comments",
+    "href": "books/LoCO.html#errata-and-comments",
+    "title": "Lectures on Convex Optimization",
+    "section": "Errata and comments",
+    "text": "Errata and comments\n\nThe misprints are highlighted in red and the corresponding suggestions for correction are highlighted in blue. Comments are in italics.\nA negative line number means counting from the bottom to the top of the page.\n\n\n\n\n\n\n\n\nPage\n\n\nLine\n\n\nPrinted\n\n\nCorrected\n\n\n\n\n\n\n15\n\n\n15\n\n\ngood approximation to \\({\\mathcal{I}}\\)\n\n\ngood approximation to \\({\\mathcal{S}}\\)\n\n\n\n\n21\n\n\n-9\n\n\noptimal value of the function \\(g\\)\n\n\noptimal value of the function \\(f\\)\n\n\n\n\n28\n\n\n2\n\n\nready to sudy\n\n\nready to study\n\n\n\n\n41\n\n\n3\n\n\nlocal rate … is different\n\n\nlocal rates … are different\n\n\n\n\n46\n\n\n2\n\n\nsolution of\n\n\nsolution to\n\n\n\n\n70\n\n\n-7\n\n\n\\(\\nabla f_k(x) = \\textcolor{red}{A_kx - e_1} = 0\\)\n\n\n\\(\\nabla f_k(x) = \\textcolor{blue}{\\frac{L}{4}(A_kx - e_1)} = 0\\)\n\n\n\n\n158\n\n\n-8\n\n\n\\(\\frac{1}{\\alpha\\beta}[f(x + \\alpha\\beta p) - f(\\textcolor{red}{x_0})]\\)\n\n\n\\(\\frac{1}{\\alpha\\beta}[f(x + \\alpha\\beta p) - f(\\textcolor{blue}{x})]\\)\n\n\n\n\n160\n\n\n-4\n\n\n\\(\\left\\langle \\nabla \\rho_{\\textcolor{red}{Q}} (x^*), x_1 - x^* \\right\\rangle\\)\n\n\n\\(\\left\\langle \\nabla \\rho_{\\textcolor{blue}{Q_2}} (x^*), x_1 - x^* \\right\\rangle\\)\n\n\n\n\n160\n\n\n-2\n\n\n\\(\\textcolor{red}{\\stackrel{(2.2.41)}{\\le}}\\)\n\n\n\\(\\textcolor{blue}{\\stackrel{(2.2.52)}{=}}\\)\n\n\n\n\n160\n\n\n-1\n\n\nThe proof of Theorem 3.1.3 is not complete, as the final inequalities are not strict. The theorem states that \\(Q_1\\) and \\(Q_2\\) are strongly separable, which requires strict inequalities: \\(\\sup_{x\\in Q_1} \\left\\langle g,x \\right\\rangle &lt; \\gamma &lt; \\inf_{y\\in Q_2} \\left\\langle g,y \\right\\rangle\\). To fix this, we can add one more line to the end of the current proof, as follows: Therefore, for any \\(x_1\\in Q_1\\) and \\(x_2\\in Q_2\\) we have: \\[\\left\\langle g^*,x_2 \\right\\rangle &lt; \\left\\langle g^*,x_2 \\right\\rangle + \\frac{1}{2}(\\rho^*)^2 \\le \\gamma^* - \\frac{1}{2}(\\rho^*)^2 \\le \\left\\langle g^*,x_1 \\right\\rangle - \\frac{1}{2}(\\rho^*)^2 &lt; \\left\\langle g^*,x_1 \\right\\rangle.\\]\n\n\n\n\n161\n\n\n8\n\n\n\\(g\\in \\mathop{\\mathrm{dom}}\\textcolor{red}{\\psi}_{Q_2}\\)\n\n\n\\(g\\in \\mathop{\\mathrm{dom}}\\textcolor{blue}{\\xi}_{Q_2}\\)\n\n\n\n\n161\n\n\n9\n\n\n\\(\\xi_{Q_1}(g) = \\xi_{Q_2}(\\textcolor{red}{p})\\)\n\n\n\\(\\xi_{Q_1}(g) = \\xi_{Q_2}(\\textcolor{blue}{g})\\)\n\n\n\n\n161\n\n\n13\n\n\nin view of Corollary 3.1.5\n\n\nin view of Corollary 3.1.4\n\n\n\n\n161\n\n\n-5\n\n\nIn view of Corollary 3.1.5\n\n\nIn view of Lemma 2.2.7\n\n\n\n\n169\n\n\n2\n\n\n\\(f'(\\bar{z}\\textcolor{red}{,} h) = \\dots + f'(\\bar{z}\\textcolor{red}{,} (0,h_y))\\)\n\n\n\\(f'(\\bar{z}\\textcolor{blue}{;} h) = \\dots + f'(\\bar{z}\\textcolor{blue}{;} (0,h_y))\\)\n\n\n\n\n169\n\n\n-3\n\n\n\\(\\phi'(x_0\\textcolor{red}{,} p)\\)\n\n\n\\(\\phi'(x_0\\textcolor{blue}{;} p)\\)\n\n\n\n\n173\n\n\n-4\n\n\n\\(f'(0\\textcolor{red}{,} x)\\)\n\n\n\\(f'(0\\textcolor{blue}{;} x)\\)\n\n\n\n\n175\n\n\n3\n\n\n\\(-\\xi_{Q_2}(-\\bar{y}) \\textcolor{red}{=} \\left\\langle g_2,\\bar{y} \\right\\rangle\\)\n\n\n\\(-\\xi_{Q_2}(-\\bar{y}) \\textcolor{blue}{\\le} \\left\\langle g_2,\\bar{y} \\right\\rangle\\)\n\n\n\n\n175\n\n\n3\n\n\n\\(\\xi_{Q_1}(\\bar{y}) \\le -\\xi_{Q_2}(-\\bar{y})\\)\n\n\nIt is not clear to me why this holds.\n\n\n\n\n178\n\n\n-8\n\n\n\\(\\bar{{\\mathcal{K}}} \\stackrel{\\mathrm{def}}{=} \\mathrm{cl} ({\\mathcal{K}}(\\textcolor{red}{\\bar{x}}))\\)\n\n\n\\(\\bar{{\\mathcal{K}}} \\stackrel{\\mathrm{def}}{=} \\mathrm{cl} ({\\mathcal{K}}(\\textcolor{blue}{Q - \\bar{x}}))\\)\n\n\n\n\n183\n\n\n-8\n\n\n\\(c = \\textcolor{red}{\\lambda^* Ax^*}\\)\n\n\n\\(c = \\textcolor{blue}{2\\lambda^* Ax^*}\\)\n\n\n\n\n183\n\n\n-7\n\n\n\\(\\lambda^* = \\textcolor{red}{\\langle c,A^{-1}c \\rangle^{1/2}}, x^* = \\textcolor{red}{\\frac{1}{\\lambda^*A^{-1}c}}\\)\n\n\n\\(\\lambda^* = \\textcolor{blue}{\\frac{1}{2}\\langle c,A^{-1}c \\rangle^{1/2}}, x^* = \\textcolor{blue}{\\frac{1}{2\\lambda^*A^{-1}c}}\\)\n\n\n\n\n\n\n\n\nAlthough the current results are technically correct, rescaling \\(\\lambda^*\\) could make the notation more consistent with Theorem 3.1.26, because the derivative of \\(\\left\\langle Ax,x \\right\\rangle\\) is \\(2Ax\\).\n\n\n\n\n186\n\n\n-6\n\n\n\\(\\left\\langle \\bar{y}, b-Ax_* \\right\\rangle = \\left\\| b- A\\textcolor{red}{\\bar{x}} \\right\\|\\)\n\n\n\\(\\left\\langle \\bar{y}, b-Ax_* \\right\\rangle = \\left\\| b- A\\textcolor{blue}{x_*} \\right\\|\\)\n\n\n\n\n186\n\n\n-5\n\n\n\\(x_{\\delta} \\stackrel{\\mathrm{def}}{=} \\bar{x} + \\delta \\stackrel{\\textcolor{red}{(3.1.70)}}{\\in} Q\\)\n\n\n\\(x_{\\delta} \\stackrel{\\mathrm{def}}{=} \\bar{x} + \\delta \\stackrel{\\textcolor{blue}{(3.1.69)}}{\\in} Q\\)\n\n\n\n\n188\n\n\n4\n\n\n\\(\\stackrel{(3.1.74)}{\\ge} \\textcolor{red}{\\langle A^Ty^*,x(u_2) -x^*\\rangle}\\)\n\n\n\\(\\stackrel{(3.1.74)}{\\ge} \\textcolor{blue}{f(x^*) + \\langle A^Ty^*,x(u_2) -x^*\\rangle}\\)\n\n\n\n\n191\n\n\n1\n\n\nlet \\(\\bar{u} = \\sum_{i=1}^{k} \\textcolor{red}{u_i}\\)\n\n\nlet \\(\\bar{u} = \\sum_{i=1}^{k} \\textcolor{blue}{\\lambda^{(i)} u_i}\\)\n\n\n\n\n194\n\n\n3\n\n\n\\(\\stackrel{(3.1.23)}{\\ge} \\textcolor{red}{\\min_{x\\in P}} \\sum_{k=0}^{N}\\dots\\)\n\n\n\\(\\stackrel{(3.1.23)}{\\ge} \\textcolor{blue}{\\max_{x\\in P}} \\sum_{k=0}^{N}\\dots\\)\n\n\n\n\n195\n\n\n-4\n\n\nfor any \\(x,y\\in B_2(\\textcolor{red}{x^*},\\rho)\\)\n\n\nfor any \\(x,y\\in B_2(\\textcolor{blue}{x_k^*},\\rho)\\)\n\n\n\n\n205\n\n\n-4\n\n\nthen \\(\\textcolor{red}{{\\mathcal{F}}}_A(N) \\neq \\emptyset\\)\n\n\nthen \\(\\textcolor{blue}{{\\mathcal{I}}}_A(N) \\neq \\emptyset\\)\n\n\n\n\n205\n\n\n-1\n\n\n\\(f(x_k) - f^* \\textcolor{red}{\\ge} \\epsilon\\)\n\n\n\\(f(x_k) - f^* \\textcolor{blue}{&gt;} \\epsilon\\)\n\n\n\n\n\n\n\n\nThe contradiction of (3.2.27) should be a strict inequality. An alternative fix could be replacing “\\(\\le\\)” in (3.2.27) with “\\(&lt;\\)”.\n\n\n\n\n206\n\n\n2\n\n\n\\(\\left\\| x_k - \\textcolor{red}{\\frac{\\epsilon}{\\left\\| g(x_k) \\right\\|^2}g(x_k)} \\right\\|^2\\)\n\n\n\\(\\left\\| x_k - \\textcolor{blue}{\\frac{\\epsilon}{\\left\\| g(x_k) \\right\\|^2}g(x_k) -x^*} \\right\\|^2\\)\n\n\n\n\n206\n\n\n5\n\n\n\\(\\left\\| x_k - \\textcolor{red}{\\frac{\\bar{f}(x_k)}{\\left\\| \\bar{g}(x_k) \\right\\|^2}\\bar{g}(x_k)} \\right\\|^2\\)\n\n\n\\(\\left\\| x_k - \\textcolor{blue}{\\frac{\\bar{f}(x_k)}{\\left\\| \\bar{g}(x_k) \\right\\|^2}\\bar{g}(x_k) - x^*} \\right\\|^2\\)\n\n\n\n\n212\n\n\n\n\n\\(R_{\\textcolor{red}{k}},x^*_{\\textcolor{red}{k}},f_{\\textcolor{red}{k}}\\)\n\n\n\\(R_{\\textcolor{blue}{k+1}},x^*_{\\textcolor{blue}{k+1}},f_{\\textcolor{blue}{k+1}}\\)\n\n\n\n\n\n\n\n\nIn the proof of Theorem 3.2.5, after equation (3.2.44), all subscripts \\(k\\) should be replaced by \\(k+1\\), except in the last line of the proof.\n\n\n\n\n213\n\n\n8\n\n\n\\(\\left\\| x_k - \\textcolor{red}{h_kg(x_k)} \\right\\|^2\\)\n\n\n\\(\\left\\| x_k - \\textcolor{blue}{h_kg(x_k) - x^*} \\right\\|^2\\)\n\n\n\n\n242\n\n\n-12\n\n\nat point a \\(x_k\\)\n\n\nat a point \\(x_k\\)\n\n\n\n\n244\n\n\n5\n\n\n\\(x\\in{\\mathcal{L}}\\textcolor{red}{(}f(x_0)\\)\n\n\n\\(x\\in{\\mathcal{L}}\\textcolor{blue}{(}f(x_0)\\textcolor{blue}{)}\\)\n\n\n\n\n\n\n\nLast updated: November 23, 2020."
   },
   {
     "objectID": "books/index.html",
     "href": "books/index.html",
     "title": "Books",
     "section": "",
-    "text": "Lectures on Convex Optimization\n\n\n\n\n\nSecond edition\n\n\n\n\n\n\nYurii Nesterov\n\n\n\n\n\n\n  \n\n\n\n\nNonlinear Programming\n\n\n\n\n\nThird edition\n\n\n\n\n\n\nDimitri P. Bertsekas\n\n\n\n\n\n\nNo matching items"
+    "text": "We provide a collection of supporting materials for the following books, including unofficial lists of errata that are potentially more complete than those provided by the authors.\n\n\n\n\n\n\n\n\n  \n\n\n\n\nLectures on Convex Optimization\n\n\n\n\n\nSecond edition\n\n\n\n\n\n\n2018\n\n\nYurii Nesterov\n\n\n\n\n\n\n  \n\n\n\n\nNonlinear Programming\n\n\n\n\n\nThird edition\n\n\n\n\n\n\n2016\n\n\nDimitri P. Bertsekas\n\n\n\n\n\n\n  \n\n\n\n\nFirst-Order Methods in Optimization\n\n\n\n\n\n\n\n\n\n\n\n\n2017\n\n\nAmir Beck\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "books/nonlinear.html",
     "href": "books/nonlinear.html",
     "title": "Nonlinear Programming",
     "section": "",
-    "text": "This page is under construction."
+    "text": "Extensive coverage of iterative optimization methods within a unifying framework\nDuality theory from both a variational and a geometric point of view\nDetailed treatment of interior point methods for linear programming\nNew material on a number of topics, such as proximal algorithms, alternating direction methods of multipliers, and conic programming\nLarge-scale optimization topics of much current interest, such as first order methods, incremental methods, and distributed asynchronous computation, and their applications in machine learning, signal processing, neural network training, and big data applications"
+  },
+  {
+    "objectID": "books/nonlinear.html#errata-and-comments",
+    "href": "books/nonlinear.html#errata-and-comments",
+    "title": "Nonlinear Programming",
+    "section": "Errata and comments",
+    "text": "Errata and comments\nComing soon."
+  },
+  {
+    "objectID": "books/FOMO.html",
+    "href": "books/FOMO.html",
+    "title": "First-Order Methods in Optimization",
+    "section": "",
+    "text": "Comprehensive study of first-order methods with the theoretical foundations\nPlentiful examples and illustrations;\nEmphasis on rates of convergence and complexity analysis of the main first-order methods used to solve large-scale problems;\nCovering both variables and functional decomposition methods"
+  },
+  {
+    "objectID": "books/FOMO.html#errata-and-comments",
+    "href": "books/FOMO.html#errata-and-comments",
+    "title": "First-Order Methods in Optimization",
+    "section": "Errata and comments",
+    "text": "Errata and comments\nComing soon."
   },
   {
     "objectID": "index.html",

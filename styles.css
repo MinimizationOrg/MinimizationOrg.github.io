@@ -1,1 +1,8 @@
 /* css styles */
+.listing-author {
+    font-size: 17px;
+}
+
+mjx-container {
+    min-width: initial !important;
+  }

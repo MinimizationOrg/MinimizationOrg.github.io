@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Yurii Nesterov">
+<meta name="dcterms.date" content="2018-01-01">
 <meta name="description" content="Second edition">
 
 <title>Minimization - Lectures on Convex Optimization</title>
@@ -32,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../partial_huge.svg" rel="icon" type="image/svg+xml">
+<link href="../partial.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -62,11 +63,13 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../partial_huge.svg" alt="" class="navbar-logo">
+    <img src="../partial.svg" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -91,10 +94,6 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../books/index.html" rel="" target="">
  <span class="menu-text">Books</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
-  </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -106,9 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -133,6 +130,12 @@ ul.task-list li input[type="checkbox"] {
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2018</p>
+    </div>
+  </div>
   
     
   </div>
@@ -143,7 +146,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
-<p>This page is under construction.</p>
+<ul>
+<li>Presents a self-contained description of fast gradient methods</li>
+<li>Offers the first description in the monographic literature of the modern second-order methods based on cubic regularization</li>
+<li>Provides a comprehensive treatment of the smoothing technique</li>
+<li>Develops a new theory of optimization in relative scale</li>
+</ul>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-right">
@@ -154,8 +162,569 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+<section id="errata-and-comments" class="level2">
+<h2 class="anchored" data-anchor-id="errata-and-comments">Errata and comments</h2>
+<ul>
+<li>The misprints are highlighted in <span style="color: red">red</span> and the corresponding suggestions for correction are highlighted in <span style="color: blue">blue</span>. <em>Comments are in italics</em>.</li>
+<li>A negative line number means counting from the bottom to the top of the page.</li>
+</ul>
+<div class="table-responsive">
+<div style="overflow-x:auto;">
+
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: right;">
+<strong>Page</strong>
+</th>
+<th style="text-align: right;">
+<strong>Line</strong>
+</th>
+<th style="text-align: left;">
+<strong>Printed</strong>
+</th>
+<th style="text-align: left;">
+<strong>Corrected</strong>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">
+15
+</td>
+<td style="text-align: right;">
+15
+</td>
+<td style="text-align: left;">
+good approximation to <span style="color: red"><span class="math inline">\({\mathcal{I}}\)</span></span>
+</td>
+<td style="text-align: left;">
+good approximation to <span style="color: blue"><span class="math inline">\({\mathcal{S}}\)</span></span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+21
+</td>
+<td style="text-align: right;">
+-9
+</td>
+<td style="text-align: left;">
+optimal value of the function <span style="color: red"><span class="math inline">\(g\)</span></span>
+</td>
+<td style="text-align: left;">
+optimal value of the function <span style="color: blue"><span class="math inline">\(f\)</span></span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+28
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: left;">
+ready to <span style="color: red">sudy</span>
+</td>
+<td style="text-align: left;">
+ready to <span style="color: blue">study</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+41
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: left;">
+local <span style="color: red">rate</span> … <span style="color: red">is</span> different
+</td>
+<td style="text-align: left;">
+local <span style="color: blue">rates</span> … <span style="color: blue">are</span> different
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+46
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: left;">
+solution <span style="color: red">of</span>
+</td>
+<td style="text-align: left;">
+solution <span style="color: blue">to</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+70
+</td>
+<td style="text-align: right;">
+-7
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\nabla f_k(x) = \textcolor{red}{A_kx - e_1} = 0\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\nabla f_k(x) = \textcolor{blue}{\frac{L}{4}(A_kx - e_1)} = 0\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+158
+</td>
+<td style="text-align: right;">
+-8
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\frac{1}{\alpha\beta}[f(x + \alpha\beta p) - f(\textcolor{red}{x_0})]\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\frac{1}{\alpha\beta}[f(x + \alpha\beta p) - f(\textcolor{blue}{x})]\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+160
+</td>
+<td style="text-align: right;">
+-4
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\langle \nabla \rho_{\textcolor{red}{Q}} (x^*), x_1 - x^* \right\rangle\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\langle \nabla \rho_{\textcolor{blue}{Q_2}} (x^*), x_1 - x^* \right\rangle\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+160
+</td>
+<td style="text-align: right;">
+-2
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\textcolor{red}{\stackrel{(2.2.41)}{\le}}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\textcolor{blue}{\stackrel{(2.2.52)}{=}}\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+160
+</td>
+<td style="text-align: right;">
+-1
+</td>
+<td colspan="2" style="text-align: left;">
+<em>The proof of Theorem 3.1.3 is not complete, as the final inequalities are not strict. The theorem states that <span class="math inline">\(Q_1\)</span> and <span class="math inline">\(Q_2\)</span> are <strong>strongly</strong> separable, which requires <strong>strict</strong> inequalities: <span class="math inline">\(\sup_{x\in Q_1} \left\langle g,x \right\rangle &lt; \gamma &lt; \inf_{y\in Q_2} \left\langle g,y \right\rangle\)</span>. To fix this, we can add one more line to the end of the current proof, as follows:</em> <span style="color: blue">Therefore, for any <span class="math inline">\(x_1\in Q_1\)</span> and <span class="math inline">\(x_2\in Q_2\)</span> we have: <span class="math display">\[\left\langle g^*,x_2 \right\rangle &lt; \left\langle g^*,x_2 \right\rangle + \frac{1}{2}(\rho^*)^2 \le \gamma^* - \frac{1}{2}(\rho^*)^2 \le \left\langle g^*,x_1 \right\rangle - \frac{1}{2}(\rho^*)^2 &lt; \left\langle g^*,x_1 \right\rangle.\]</span></span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+161
+</td>
+<td style="text-align: right;">
+8
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(g\in \mathop{\mathrm{dom}}\textcolor{red}{\psi}_{Q_2}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(g\in \mathop{\mathrm{dom}}\textcolor{blue}{\xi}_{Q_2}\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+161
+</td>
+<td style="text-align: right;">
+9
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\xi_{Q_1}(g) = \xi_{Q_2}(\textcolor{red}{p})\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\xi_{Q_1}(g) = \xi_{Q_2}(\textcolor{blue}{g})\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+161
+</td>
+<td style="text-align: right;">
+13
+</td>
+<td style="text-align: left;">
+in view of Corollary 3.1.<span style="color: red">5</span>
+</td>
+<td style="text-align: left;">
+in view of Corollary 3.1.<span style="color: blue">4</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+161
+</td>
+<td style="text-align: right;">
+-5
+</td>
+<td style="text-align: left;">
+In view of <span style="color: red">Corollary 3.1.5</span>
+</td>
+<td style="text-align: left;">
+In view of <span style="color: blue">Lemma 2.2.7</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+169
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f'(\bar{z}\textcolor{red}{,} h) = \dots + f'(\bar{z}\textcolor{red}{,} (0,h_y))\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f'(\bar{z}\textcolor{blue}{;} h) = \dots + f'(\bar{z}\textcolor{blue}{;} (0,h_y))\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+169
+</td>
+<td style="text-align: right;">
+-3
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\phi'(x_0\textcolor{red}{,} p)\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\phi'(x_0\textcolor{blue}{;} p)\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+173
+</td>
+<td style="text-align: right;">
+-4
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f'(0\textcolor{red}{,} x)\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f'(0\textcolor{blue}{;} x)\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+175
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(-\xi_{Q_2}(-\bar{y}) \textcolor{red}{=} \left\langle g_2,\bar{y} \right\rangle\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(-\xi_{Q_2}(-\bar{y}) \textcolor{blue}{\le} \left\langle g_2,\bar{y} \right\rangle\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+175
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: left;">
+<span style="color: red"><span class="math inline">\(\xi_{Q_1}(\bar{y}) \le -\xi_{Q_2}(-\bar{y})\)</span></span>
+</td>
+<td style="text-align: left;">
+<em>It is not clear to me why this holds.</em>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+178
+</td>
+<td style="text-align: right;">
+-8
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\bar{{\mathcal{K}}} \stackrel{\mathrm{def}}{=} \mathrm{cl} ({\mathcal{K}}(\textcolor{red}{\bar{x}}))\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\bar{{\mathcal{K}}} \stackrel{\mathrm{def}}{=} \mathrm{cl} ({\mathcal{K}}(\textcolor{blue}{Q - \bar{x}}))\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+183
+</td>
+<td style="text-align: right;">
+-8
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(c = \textcolor{red}{\lambda^* Ax^*}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(c = \textcolor{blue}{2\lambda^* Ax^*}\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+183
+</td>
+<td style="text-align: right;">
+-7
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\lambda^* = \textcolor{red}{\langle c,A^{-1}c \rangle^{1/2}}, x^* = \textcolor{red}{\frac{1}{\lambda^*A^{-1}c}}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\lambda^* = \textcolor{blue}{\frac{1}{2}\langle c,A^{-1}c \rangle^{1/2}}, x^* = \textcolor{blue}{\frac{1}{2\lambda^*A^{-1}c}}\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td colspan="2" style="text-align: left;">
+<em>Although the current results are technically correct, rescaling <span class="math inline">\(\lambda^*\)</span> could make the notation more consistent with Theorem 3.1.26, because the derivative of <span class="math inline">\(\left\langle Ax,x \right\rangle\)</span> is <span class="math inline">\(2Ax\)</span>.</em>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+186
+</td>
+<td style="text-align: right;">
+-6
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\langle \bar{y}, b-Ax_* \right\rangle = \left\| b- A\textcolor{red}{\bar{x}} \right\|\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\langle \bar{y}, b-Ax_* \right\rangle = \left\| b- A\textcolor{blue}{x_*} \right\|\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+186
+</td>
+<td style="text-align: right;">
+-5
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(x_{\delta} \stackrel{\mathrm{def}}{=} \bar{x} + \delta \stackrel{\textcolor{red}{(3.1.70)}}{\in} Q\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(x_{\delta} \stackrel{\mathrm{def}}{=} \bar{x} + \delta \stackrel{\textcolor{blue}{(3.1.69)}}{\in} Q\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+188
+</td>
+<td style="text-align: right;">
+4
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\stackrel{(3.1.74)}{\ge} \textcolor{red}{\langle A^Ty^*,x(u_2) -x^*\rangle}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\stackrel{(3.1.74)}{\ge} \textcolor{blue}{f(x^*) + \langle A^Ty^*,x(u_2) -x^*\rangle}\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+191
+</td>
+<td style="text-align: right;">
+1
+</td>
+<td style="text-align: left;">
+let <span class="math inline">\(\bar{u} = \sum_{i=1}^{k} \textcolor{red}{u_i}\)</span>
+</td>
+<td style="text-align: left;">
+let <span class="math inline">\(\bar{u} = \sum_{i=1}^{k} \textcolor{blue}{\lambda^{(i)} u_i}\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+194
+</td>
+<td style="text-align: right;">
+3
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\stackrel{(3.1.23)}{\ge} \textcolor{red}{\min_{x\in P}} \sum_{k=0}^{N}\dots\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\stackrel{(3.1.23)}{\ge} \textcolor{blue}{\max_{x\in P}} \sum_{k=0}^{N}\dots\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+195
+</td>
+<td style="text-align: right;">
+-4
+</td>
+<td style="text-align: left;">
+for any <span class="math inline">\(x,y\in B_2(\textcolor{red}{x^*},\rho)\)</span>
+</td>
+<td style="text-align: left;">
+for any <span class="math inline">\(x,y\in B_2(\textcolor{blue}{x_k^*},\rho)\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+205
+</td>
+<td style="text-align: right;">
+-4
+</td>
+<td style="text-align: left;">
+then <span class="math inline">\(\textcolor{red}{{\mathcal{F}}}_A(N) \neq \emptyset\)</span>
+</td>
+<td style="text-align: left;">
+then <span class="math inline">\(\textcolor{blue}{{\mathcal{I}}}_A(N) \neq \emptyset\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+205
+</td>
+<td style="text-align: right;">
+-1
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f(x_k) - f^* \textcolor{red}{\ge} \epsilon\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(f(x_k) - f^* \textcolor{blue}{&gt;} \epsilon\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td colspan="2" style="text-align: left;">
+<em>The contradiction of (3.2.27) should be a strict inequality. An alternative fix could be replacing “<span class="math inline">\(\le\)</span>” in (3.2.27) with “<span class="math inline">\(&lt;\)</span>”.</em>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+206
+</td>
+<td style="text-align: right;">
+2
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{red}{\frac{\epsilon}{\left\| g(x_k) \right\|^2}g(x_k)} \right\|^2\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{blue}{\frac{\epsilon}{\left\| g(x_k) \right\|^2}g(x_k) -x^*} \right\|^2\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+206
+</td>
+<td style="text-align: right;">
+5
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{red}{\frac{\bar{f}(x_k)}{\left\| \bar{g}(x_k) \right\|^2}\bar{g}(x_k)} \right\|^2\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{blue}{\frac{\bar{f}(x_k)}{\left\| \bar{g}(x_k) \right\|^2}\bar{g}(x_k) - x^*} \right\|^2\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+212
+</td>
+<td style="text-align: right;">
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(R_{\textcolor{red}{k}},x^*_{\textcolor{red}{k}},f_{\textcolor{red}{k}}\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(R_{\textcolor{blue}{k+1}},x^*_{\textcolor{blue}{k+1}},f_{\textcolor{blue}{k+1}}\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+</td>
+<td style="text-align: right;">
+</td>
+<td colspan="2" style="text-align: left;">
+<em>In the proof of Theorem 3.2.5, after equation (3.2.44), <strong>all</strong> subscripts <span class="math inline">\(k\)</span> should be replaced by <span class="math inline">\(k+1\)</span>, except in the last line of the proof.</em>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+213
+</td>
+<td style="text-align: right;">
+8
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{red}{h_kg(x_k)} \right\|^2\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(\left\| x_k - \textcolor{blue}{h_kg(x_k) - x^*} \right\|^2\)</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">
+242
+</td>
+<td style="text-align: right;">
+-12
+</td>
+<td style="text-align: left;">
+at <span style="color: red">point a</span> <span class="math inline">\(x_k\)</span>
+</td>
+<td style="text-align: left;">
+at <span style="color: blue">a point</span> <span class="math inline">\(x_k\)</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">
+244
+</td>
+<td style="text-align: right;">
+5
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(x\in{\mathcal{L}}\textcolor{red}{(}f(x_0)\)</span>
+</td>
+<td style="text-align: left;">
+<span class="math inline">\(x\in{\mathcal{L}}\textcolor{blue}{(}f(x_0)\textcolor{blue}{)}\)</span>
+</td>
+</tr>
+</tbody>
+
+</table>
+</div>
+</div>
+<p>Last updated: November 23, 2020.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
